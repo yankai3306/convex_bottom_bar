@@ -18,10 +18,9 @@ class _HomeTabPageState extends State<HomeTabPage>
 
   var _tabItems = [
     TabItem(
-      icon: Image.asset("images/sample-1.png"),
+      icon: Image.asset("images/sample-1.png", width: 20, height: 20,),
       activeIcon: Container(
-        margin: EdgeInsets.only(top: 10),
-        child: Image.asset("images/sample-1-2.png"),
+        child: Image.asset("images/sample-1-2.png", width: 20, height: 20,),
       ),
       titleWidget: Text("123"),
       activeTitleWidget: Text(
@@ -32,15 +31,14 @@ class _HomeTabPageState extends State<HomeTabPage>
     TabItem(
       icon: Image.asset("images/sample-1.png"),
       activeIcon: Container(
-        margin: EdgeInsets.only(top: 10),
         child: Image.asset("images/sample-1-2.png"),
       ),
       titleWidget: Container(
-        height: 10,
+        height: 20,
         child: Text("123"),
       ),
       activeTitleWidget: Container(
-        height: 10,
+        height: 20,
         child: Text(
           "123",
           style: TextStyle(color: Colors.tealAccent),
@@ -50,21 +48,18 @@ class _HomeTabPageState extends State<HomeTabPage>
     TabItem(
         icon: Image.asset("images/sample-1.png"),
         activeIcon: Container(
-          margin: EdgeInsets.only(top: 10),
           child: Image.asset("images/sample-1-2.png"),
         ),
         title: 'STORY'),
     TabItem(
         icon: Image.asset("images/sample-1.png"),
         activeIcon: Container(
-          margin: EdgeInsets.only(top: 10),
           child: Image.asset("images/sample-1-2.png"),
         ),
         title: 'POSTS'),
     TabItem(
         icon: Image.asset("images/sample-1.png"),
         activeIcon: Container(
-          margin: EdgeInsets.only(top: 10),
           child: Image.asset("images/sample-1-2.png"),
         ),
         title: 'CHARTS'),

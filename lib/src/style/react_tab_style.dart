@@ -37,50 +37,32 @@ class ReactTabStyle extends InnerBuilder {
   @override
   Widget build(BuildContext context, int index, bool active) {
     var item = items[index];
-    var style = ofStyle(context);
-    var noLabel = style.hideEmptyLabel && hasNoText(item);
-
     if (active) {
       var children = <Widget>[
-        TransitionContainer.scale(
-          data: index,
-          curve: curve,
-          child: BlendImageIcon(
-            item.activeIcon ?? item.icon,
-            color: item.blend ? activeColor : null,
-            size: style.activeIconSize,
-          ),
-        ),
+        BlendImageIcon(item.activeIcon, color: item.blend ? activeColor : null),
       ];
-      if (!noLabel) {
-        children.add(Text(item.title ?? '', style: style.textStyle(activeColor)));
-      }
       if(item.activeTitleWidget != null) {
         children.add(item.activeTitleWidget ?? Container());
       }
       return Container(
         padding: const EdgeInsets.only(bottom: 2),
         child: Column(
-          mainAxisAlignment:
-              noLabel ? MainAxisAlignment.center : MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: children,
         ),
       );
     }
+
     var children = <Widget>[
       BlendImageIcon(item.icon, color: item.blend ? color : null),
     ];
-    if (!noLabel) {
-      children.add(Text(item.title ?? '', style: style.textStyle(color)));
-    }
     if(item.titleWidget != null) {
       children.add(item.titleWidget ?? Container());
     }
     return Container(
       padding: const EdgeInsets.only(bottom: 2),
       child: Column(
-        mainAxisAlignment:
-            noLabel ? MainAxisAlignment.center : MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: children,
       ),
     );
