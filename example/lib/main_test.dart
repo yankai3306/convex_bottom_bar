@@ -29,9 +29,9 @@ class _HomeTabPageState extends State<HomeTabPage>
       ),
     ),
     TabItem(
-      icon: Image.asset("images/sample-1.png"),
+      icon: Image.asset("images/sample-1.png", width: 20, height: 20,),
       activeIcon: Container(
-        child: Image.asset("images/sample-1-2.png"),
+        child: Image.asset("images/sample-1-2.png", width: 20, height: 20,),
       ),
       titleWidget: Container(
         height: 20,

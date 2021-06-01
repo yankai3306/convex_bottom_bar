@@ -45,9 +45,9 @@ class ReactTabStyle extends InnerBuilder {
         children.add(item.activeTitleWidget ?? Container());
       }
       return Container(
-        padding: const EdgeInsets.only(bottom: 2),
+        padding: const EdgeInsets.only(top: 25, bottom: 2),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: children,
         ),
       );
@@ -60,9 +60,8 @@ class ReactTabStyle extends InnerBuilder {
       children.add(item.titleWidget ?? Container());
     }
     return Container(
-      padding: const EdgeInsets.only(bottom: 2),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: children,
       ),
     );
