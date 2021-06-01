@@ -21,6 +21,10 @@ class TabItem<T> {
   /// Tab text.
   final String? title;
 
+  final Widget? titleWidget;
+
+  final Widget? activeTitleWidget;
+
   /// IconData or Image.
   ///
   /// ![](https://github.com/hacktons/convex_bottom_bar/raw/master/doc/appbar-image.gif)
@@ -36,6 +40,8 @@ class TabItem<T> {
   /// Create item
   const TabItem({
     this.title = '',
+    this.titleWidget,
+    this.activeTitleWidget,
     required this.icon,
     this.activeIcon,
     bool? isIconBlend,

@@ -53,8 +53,10 @@ class ReactTabStyle extends InnerBuilder {
         ),
       ];
       if (!noLabel) {
-        children
-            .add(Text(item.title ?? '', style: style.textStyle(activeColor)));
+        children.add(Text(item.title ?? '', style: style.textStyle(activeColor)));
+      }
+      if(item.activeTitleWidget != null) {
+        children.add(item.activeTitleWidget ?? Container());
       }
       return Container(
         padding: const EdgeInsets.only(bottom: 2),
@@ -70,6 +72,9 @@ class ReactTabStyle extends InnerBuilder {
     ];
     if (!noLabel) {
       children.add(Text(item.title ?? '', style: style.textStyle(color)));
+    }
+    if(item.titleWidget != null) {
+      children.add(item.titleWidget ?? Container());
     }
     return Container(
       padding: const EdgeInsets.only(bottom: 2),
